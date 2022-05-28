@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">SocialX</string>
+    <string name="social">Social</string>
+    <string name="x">X</string>
+    <string name="login">LOGIN</string>
+    <string name="sign_up">SIGN UP</string>
+    <string name="register">REGISTER</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="Heading_1">SignIn into your \nAccount</string>
+    <string name="email">Email</string>
+    <string name="email_hint">johndoe@gmail.com</string>
+    <string name="password">Password</string>
+    <string name="forgot_password">Forgot Password ?</string>
+    <string name="login_with">Login With</string>
+    <string name="text_3">Don\'t have an Account ? <font color='#FE0000'>Register Now</font></string>
+    <string name="create_an_n_account">Create an \nAccount</string>
+    <string name="name">Name</string>
+    <string name="john_doe">John Doe</string>
+    <string name="contact_no">Contact No</string>
+    <string name="_9876543210">9876543210</string>
+    <string name="Terms_and_Conditions">I agree with <font color='#FE0000'><u>Terms &amp; Conditions</u></font></string>
+    <string name="already_have_an_account_sign_in">Already have an Account ? <font color='#FE0000'>Sign In!</font></string>
+    <string name="invalid_name">Please enter Name</string>
+    <string name="invalid_email">Please enter valid Email</string>
+    <string name="invalid_mobile">Please enter Valid Phone Number</string>
+    <string name="invalid_password">Please enter Valid Password</string>
+    <string name="api_key">b648b5d2aeb54e66a4c95f5a62b845d6</string>
+</resources>

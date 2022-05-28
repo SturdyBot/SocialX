@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Login_Fragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:background="@drawable/fragment_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="15dp"
+            android:layout_above="@id/button">
+
+            <TextView
+                android:id="@+id/Heading_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:fontFamily="@font/alata"
+                android:paddingTop="10dp"
+                android:textStyle="bold"
+                android:text="@string/Heading_1"
+                android:textColor="@color/theme"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/Email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:fontFamily="@font/cabin"
+                android:paddingTop="15dp"
+                android:textStyle="bold"
+                android:text="@string/email"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:layout_below="@id/Heading_1"/>
+
+            <EditText
+                android:id="@+id/Login_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Email"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="25dp"
+                android:autofillHints="emailAddress"
+                android:drawableEnd="@drawable/mail_24"
+                android:hint="@string/email_hint"
+                android:inputType="textEmailAddress"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/Password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:fontFamily="@font/cabin"
+                android:paddingTop="15dp"
+                android:textStyle="bold"
+                android:text="@string/password"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:layout_below="@id/Login_email"/>
+
+            <EditText
+                android:id="@+id/Login_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Password"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="25dp"
+                android:autofillHints="password"
+                android:drawableEnd="@drawable/lock_24"
+                android:hint="@string/password"
+                android:inputType="textPassword"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/Forgot_Password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="25dp"
+                android:fontFamily="@font/cabin"
+                android:layout_alignParentEnd="true"
+                android:paddingTop="10dp"
+                android:textStyle="bold"
+                android:text="@string/forgot_password"
+                android:textColor="@color/theme"
+                android:textSize="18sp"
+                android:layout_below="@id/Login_password"/>
+
+            <TextView
+                android:id="@+id/Login_with"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:paddingTop="15dp"
+                android:text="@string/login_with"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:layout_below="@id/Forgot_Password"/>
+
+            <RelativeLayout
+                android:id="@+id/rl_icons"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_below="@id/Login_with"
+                android:layout_marginTop="20dp">
+
+                <View
+                    android:id="@+id/divider_1"
+                    android:layout_width="0dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_height="match_parent" />
+
+                <ImageView
+                    android:id="@+id/Google"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:layout_toStartOf="@id/divider_1"
+                    android:src="@drawable/google" />
+
+                <ImageView
+                    android:id="@+id/Facebook"
+                    android:layout_marginStart="20dp"
+                    android:layout_toEndOf="@id/divider_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/facebook"/>
+            </RelativeLayout>
+
+        <TextView
+            android:id="@+id/Register_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rl_icons"
+            android:layout_marginTop="20dp"
+            android:text="@string/text_3"
+            android:textSize="16sp"
+            android:layout_centerHorizontal="true"
+            android:textColor="#656363"/>
+
+        </RelativeLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/button_outlook"
+            android:fontFamily="@font/work_sans"
+            android:text="@string/login"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+
+</FrameLayout>
