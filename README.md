@@ -2,18 +2,18 @@
 
 App developed using Android Studio with Android XML (Front-End) and Java (Back-End)
 
-- Login and Registration achieved using Custom Firebase Authentication.
-- Google Sign-In achieved using Google Firebase Authentication.
+- Login and Registration achieved using [Custom Firebase Authentication](https://firebase.google.com/docs/auth)
+- Google Sign-In achieved using Google [Firebase Authentication](https://firebase.google.com/docs/auth)
 - Validation achieved using [Awesome Validation](https://github.com/thyrlian/AwesomeValidation)
-- Country codes Spinner (Drop-down) achieved using "[CountryCodePickerProject]([url](https://github.com/hbb20/CountryCodePickerProject))"
-- For downloading Images - [Picasso]([url](https://github.com/square/picasso))
+- Country codes Spinner (Drop-down) achieved using [CountryCodePickerProject](https://github.com/hbb20/CountryCodePickerProject)
+- For downloading Images - [Picasso](https://github.com/square/picasso)
 
 // NEWS API //
 
-- News API from "[newsapi.org]([url](https://newsapi.org/))"
-- HTTP Client for Android using "[Retrofit]([url](https://github.com/square/retrofit))"
-- API testing - "[Postman]([url](https://www.postman.com/))"
-- Serialization achieved using "[GSON Converter]([url](https://github.com/square/retrofit/blob/master/retrofit-converters/gson/README.md))"
+- News API from [newsapi.org](https://newsapi.org/)
+- HTTP Client for Android using [Retrofit](https://github.com/square/retrofit)
+- API testing - [Postman](https://www.postman.com/)
+- Serialization (RetroFit converter) achieved using "[GSON Converter](https://github.com/square/retrofit/blob/master/retrofit-converters/gson/README.md)
 
 Note : App only fetches news in Card Views, each card view doesn't expand and display complete news.
 
