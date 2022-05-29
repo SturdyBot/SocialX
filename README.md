@@ -21,7 +21,9 @@ App developed using Android Studio with Android XML (Front-End) and Java (Back-E
 
 --> Here is the working of the SocialX Android Application.
 
-https://user-images.githubusercontent.com/50311150/170854409-6c7d3bbb-d016-4938-a427-0c8b8a573d11.mp4
+https://user-images.githubusercontent.com/50311150/170855033-d7eedc57-1d4c-4537-920d-0eb217167573.mp4
+
+
 
 
 
