@@ -37,6 +37,7 @@ public class SignUp_Fragment extends Fragment {
     ProgressDialog progressDialog;
     FirebaseAuth mAuth;
     FirebaseUser mUser;
+    RelativeLayout rl_1,rl_2;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -69,7 +70,7 @@ public class SignUp_Fragment extends Fragment {
             }
         });
 
-        //Changing from Sign-Up Fragment to Login Fragment - Doesn't update Main Activity UI
+        //Changing from Sign-Up Fragment to Login Fragment 
 
         TextView Sign_In = view.findViewById(R.id.SignIn_Text);
         Sign_In.setOnClickListener(new View.OnClickListener() {
@@ -80,6 +81,17 @@ public class SignUp_Fragment extends Fragment {
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.frame_layout, fragment);
                 fragmentTransaction.commit();
+                
+                //Updating UI
+                rl_1 = (RelativeLayout)getActivity().findViewById(R.id.rl_1);
+                rl_1.setBackground(ContextCompat.getDrawable(getContext(),R.drawable.red_outlook));
+                TextView text = (TextView) getActivity().findViewById(R.id.Login);
+                text.setTextColor(getResources().getColor(R.color.white));
+
+                rl_2 = (RelativeLayout)getActivity().findViewById(R.id.rl_2);
+                rl_2.setBackground(ContextCompat.getDrawable(getContext(),R.drawable.white_outlook_right));
+                TextView text_1 = (TextView) getActivity().findViewById(R.id.Sign_Up);
+                text_1.setTextColor(getResources().getColor(R.color.text_color));
             }
         });
 
@@ -89,6 +101,19 @@ public class SignUp_Fragment extends Fragment {
         //Performing Authentication by checking Validation using Awesome Validation
 
     private void performAuth() {
+            
+        //Updating UI
+        rl_1 = (RelativeLayout)getActivity().findViewById(R.id.rl_1);
+        rl_1.setBackground(ContextCompat.getDrawable(getContext(),R.drawable.red_outlook));
+        TextView text = (TextView) getActivity().findViewById(R.id.Login);
+        text.setTextColor(getResources().getColor(R.color.white));
+
+        rl_2 = (RelativeLayout)getActivity().findViewById(R.id.rl_2);
+        rl_2.setBackground(ContextCompat.getDrawable(getContext(),R.drawable.white_outlook_right));
+        TextView text_1 = (TextView) getActivity().findViewById(R.id.Sign_Up);
+        text_1.setTextColor(getResources().getColor(R.color.text_color));
+            
+        
             String email = editEmail.getText().toString();
             String password = editPassword.getText().toString();
             awesomeValidation.addValidation(getActivity(),R.id.Reg_Name, RegexTemplate.NOT_EMPTY,R.string.invalid_name);
@@ -117,6 +142,17 @@ public class SignUp_Fragment extends Fragment {
                     } else {
                         progressDialog.dismiss();
                         Toast.makeText(getContext(), "" + task.getException(), Toast.LENGTH_SHORT).show();
+                        
+                        //Updating UI
+                        rl_1 = (RelativeLayout)getActivity().findViewById(R.id.rl_1);
+                        rl_1.setBackground(ContextCompat.getDrawable(getContext(),R.drawable.white_outlook_left));
+                        TextView text = (TextView) getActivity().findViewById(R.id.Login);
+                        text.setTextColor(getResources().getColor(R.color.text_color));
+
+                        rl_2 = (RelativeLayout)getActivity().findViewById(R.id.rl_2);
+                        rl_2.setBackground(ContextCompat.getDrawable(getContext(),R.drawable.red_outlook));
+                        TextView text_1 = (TextView) getActivity().findViewById(R.id.Sign_Up);
+                        text_1.setTextColor(getResources().getColor(R.color.white));
                     }
                 }
             });
