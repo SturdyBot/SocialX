@@ -159,7 +159,7 @@ public class SignUp_Fragment extends Fragment {
         }
     }
 
-    //If Registration is Successful, the Sign-Up Fragment changes to Login Fragment - Doesn't update Main Activity UI
+    //If Registration is Successful, the Sign-Up Fragment changes to Login Fragment
 
     private void sendUserToNextActivity() {
         Fragment fragment = new Login_Fragment();
