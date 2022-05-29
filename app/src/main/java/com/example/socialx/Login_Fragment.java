@@ -41,6 +41,7 @@ public class Login_Fragment extends Fragment {
     ProgressDialog progressDialog;
     FirebaseAuth mAuth;
     FirebaseUser mUser;
+    RelativeLayout rl_1,rl_2;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -78,7 +79,7 @@ public class Login_Fragment extends Fragment {
             }
         });
         
-        //Changing from Login Fragment to Sign-Up Fragment - Doesn't update Main Activity UI
+        //Changing from Login Fragment to Sign-Up Fragment 
         TextView Register = view.findViewById(R.id.Register_text);
         Register.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -88,6 +89,17 @@ public class Login_Fragment extends Fragment {
               FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
               fragmentTransaction.replace(R.id.frame_layout,fragment);
               fragmentTransaction.commit();
+                
+                //Updating UI
+                rl_1 = (RelativeLayout)getActivity().findViewById(R.id.rl_1);
+                rl_1.setBackground(ContextCompat.getDrawable(getContext(),R.drawable.white_outlook_left));
+                TextView text = (TextView) getActivity().findViewById(R.id.Login);
+                text.setTextColor(getResources().getColor(R.color.text_color));
+
+                rl_2 = (RelativeLayout)getActivity().findViewById(R.id.rl_2);
+                rl_2.setBackground(ContextCompat.getDrawable(getContext(),R.drawable.red_outlook));
+                TextView text_1 = (TextView) getActivity().findViewById(R.id.Sign_Up);
+                text_1.setTextColor(getResources().getColor(R.color.white));
             }
         });
         return view;
