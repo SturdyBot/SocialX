@@ -101,19 +101,7 @@ public class SignUp_Fragment extends Fragment {
         //Performing Authentication by checking Validation using Awesome Validation
 
     private void performAuth() {
-            
-        //Updating UI
-        rl_1 = (RelativeLayout)getActivity().findViewById(R.id.rl_1);
-        rl_1.setBackground(ContextCompat.getDrawable(getContext(),R.drawable.red_outlook));
-        TextView text = (TextView) getActivity().findViewById(R.id.Login);
-        text.setTextColor(getResources().getColor(R.color.white));
-
-        rl_2 = (RelativeLayout)getActivity().findViewById(R.id.rl_2);
-        rl_2.setBackground(ContextCompat.getDrawable(getContext(),R.drawable.white_outlook_right));
-        TextView text_1 = (TextView) getActivity().findViewById(R.id.Sign_Up);
-        text_1.setTextColor(getResources().getColor(R.color.text_color));
-            
-        
+               
             String email = editEmail.getText().toString();
             String password = editPassword.getText().toString();
             awesomeValidation.addValidation(getActivity(),R.id.Reg_Name, RegexTemplate.NOT_EMPTY,R.string.invalid_name);
@@ -124,6 +112,17 @@ public class SignUp_Fragment extends Fragment {
             //Check whether the check box is checked or not
             if(!checkBox.isChecked()){
                 Toast.makeText(getContext(), "Please accept Terms and Conditions", Toast.LENGTH_SHORT).show();
+                
+                   //Updating UI
+                rl_1 = (RelativeLayout)getActivity().findViewById(R.id.rl_1);
+                rl_1.setBackground(ContextCompat.getDrawable(getContext(),R.drawable.white_outlook_left));
+                TextView text = (TextView) getActivity().findViewById(R.id.Login);
+                text.setTextColor(getResources().getColor(R.color.text_color));
+
+                rl_2 = (RelativeLayout)getActivity().findViewById(R.id.rl_2);
+                rl_2.setBackground(ContextCompat.getDrawable(getContext(),R.drawable.red_outlook));
+                TextView text_1 = (TextView) getActivity().findViewById(R.id.Sign_Up);
+                text_1.setTextColor(getResources().getColor(R.color.white));
             }
 
             if ((awesomeValidation.validate()) && (checkBox.isChecked())) {
@@ -131,6 +130,18 @@ public class SignUp_Fragment extends Fragment {
             progressDialog.setMessage("Registering...");
             progressDialog.setCanceledOnTouchOutside(false);
             progressDialog.show();
+                
+                
+                //Updating UI
+                rl_1 = (RelativeLayout)getActivity().findViewById(R.id.rl_1);
+                rl_1.setBackground(ContextCompat.getDrawable(getContext(),R.drawable.red_outlook));
+                TextView text = (TextView) getActivity().findViewById(R.id.Login);
+                text.setTextColor(getResources().getColor(R.color.white));
+
+                rl_2 = (RelativeLayout)getActivity().findViewById(R.id.rl_2);
+                rl_2.setBackground(ContextCompat.getDrawable(getContext(),R.drawable.white_outlook_right));
+                TextView text_1 = (TextView) getActivity().findViewById(R.id.Sign_Up);
+                text_1.setTextColor(getResources().getColor(R.color.text_color));
 
             mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                 @Override
